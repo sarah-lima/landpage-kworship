@@ -38,7 +38,7 @@ export default function Home() {
 
               <a
                 href="#como-participar"
-                className="mt-8 inline-flex rounded-full bg-[#07132a] px-8 py-4 font-bold text-gray-900 transition hover:-translate-y-1 hover:bg-[#202b40]"
+                className="mt-8 inline-flex rounded-full bg-[#07132a] px-8 py-4 font-bold text-white transition hover:-translate-y-1 hover:bg-[#202b40]"
               >
                 Quero participar
               </a>
@@ -201,7 +201,7 @@ Participe do evento ao longo dos dias e esteja presente no momento do sorteio.  
           <div className="mt-8 flex flex-wrap gap-4">
             <a
               href="[LINK_REGULAMENTO]"
-              className="rounded-full bg-[#01255f] px-6 py-3 font-bold text-gray-900 transition hover:bg-yellow-200"
+              className="rounded-full bg-[#01255f] px-6 py-3 font-bold text-white transition hover:bg-yellow-200"
             >
               Ler regulamento
             </a>
