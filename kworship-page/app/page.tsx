@@ -161,8 +161,6 @@ export default function Home() {
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             <StepCard number="01" title="Siga nossas redes sociais">
               Siga o perfil <a href="https://www.instagram.com/adalos_jpn" target="_blank" rel="noopener noreferrer" className="font-black underline">@adalos</a> e <a href="https://www.instagram.com/kworshipday" target="_blank" rel="noopener noreferrer" className="font-black underline">@kworshipday</a> no Instagram.
-              <br /> Curta e comente o post oficial do sorteio.
-
             </StepCard>
             <StepCard number="02" title="Aumente suas chances">
               Doe um quilo de alimento e aumente suas chances de ganhar.
@@ -186,7 +184,7 @@ export default function Home() {
           <div className="mt-8 space-y-4">
             <Rule title="Como participar?">
               Basta seguir o <a href="https://www.instagram.com/adalos_jpn" target="_blank" rel="noopener noreferrer" className="font-black underline">@adalos</a> e <a href="https://www.instagram.com/kworshipday" target="_blank" rel="noopener noreferrer" className="font-black underline">@kworshipday</a> no Instagram.
-              <br /> Curtir e comentar no post oficial do sorteio. E estar presente no evento nos dias 07/11 e 08/11.
+              <br /> E estar presente no evento nos dias 07/11 e 08/11.
             </Rule>
             <Rule title="Como aumentar minhas chances de ganhar?">
               A cada um kg de alimento doado, o participante recebe 1 voucher extra para concorrer ao sorteio. Quanto mais alimentos forem doados, mais chances de ganhar!
