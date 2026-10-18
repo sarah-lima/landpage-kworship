@@ -6,10 +6,16 @@ export default function Home() {
       <section className="relative isolate overflow-hidden px-6 py-20 text-white md:py-28">
 
         {/* Imagem somente no mobile */}
-        <div
-          className="absolute inset-0 -z-10 bg-[url('/kworship.png')] bg-cover bg-center bg-no-repeat md:hidden"
-          aria-hidden="true"
-        />
+       <div
+  className="absolute inset-0 -z-10 bg-[url('/banner.png')] bg-cover bg-center bg-no-repeat md:hidden"
+  aria-hidden="true"
+/>
+
+{/* Camada escura */}
+<div
+  className="absolute inset-0 -z-10 bg-black/50 md:hidden"
+  aria-hidden="true"
+/>
 
         {/* Gradiente somente no desktop */}
         <div
@@ -24,12 +30,15 @@ export default function Home() {
 
           <div className="mt-2 grid px-4 items-center gap-10 md:grid-cols-2">
             <div>
+ 
               <div className="text-4xl font-black leading-tight md:text-6xl">
                 <img src="/logo.png" alt="K-Worship" className="mb-4 w-82" />
+                
                 <span className="block text-[#aac5ef]">
                   Participe e concorra!
                 </span>
               </div>
+
 
               <p className="mt-6 max-w-xl text-lg text-white/90">
                 Faça parte dessa iniciativa, contribua com a nossa causa
@@ -43,15 +52,12 @@ export default function Home() {
                 Quero participar
               </a>
             </div>
-
-            <div className="rounded-3xl border border-white/20 bg-white/10 p-8 text-center shadow-2xl backdrop-blur">
-              <span className="text-6xl">🎁</span>
-              <h2 className="mt-4 text-3xl font-black">
-                Um gesto pode fazer a diferença!
-              </h2>
-              <p className="mt-3 text-white/90">
-                Participe, contribua e confira as regras do sorteio.
-              </p>
+            <div className="hidden md:block relative min-h-[350px] w-screen md:absolute md:inset-y-0 md:right-0 md:h-full md:w-[55%]">
+              <img
+                src="/banner.PNG"
+                alt="Banner K-Worship"
+                className="h-full w-full object-cover object-center"
+              />
             </div>
           </div>
         </div>
@@ -160,9 +166,9 @@ export default function Home() {
             </StepCard>
             <StepCard number="02" title="Aumente suas chances">
               Doe um quilo de alimento e aumente suas chances de ganhar.
-              <br /> Cada kg doado = 1 voucher<br/> O alimento deve ser apresentado nos dias do evento            </StepCard>
+              <br /> Cada kg doado = 1 voucher<br /> O alimento deve ser apresentado nos dias do evento            </StepCard>
             <StepCard number="03" title="Esteja presente no evento">
-Participe do evento ao longo dos dias e esteja presente no momento do sorteio.            </StepCard>
+              Participe do evento ao longo dos dias e esteja presente no momento do sorteio.            </StepCard>
           </div>
         </div>
       </section>
@@ -187,21 +193,27 @@ Participe do evento ao longo dos dias e esteja presente no momento do sorteio.  
             </Rule>
             <Rule title="Quando será realizado o sorteio?">
               O sorteio será realizado nos dias 07/11 e 08/11, durante o evento.
-              </Rule>
+            </Rule>
             <Rule title="Quais alimentos podem ser doados?">
-              Arroz;
-              Feijão;
-              Macarrão;
-              Óleo;
-              Açúcar;
-              Sal;
+              <ul>
+                <li className="list-disc">Arroz</li>
+                <li className="list-disc">Feijão</li>
+                <li className="list-disc">Café</li>
+                <li className="list-disc">Macarrão</li>
+                <li className="list-disc">Óleo</li>
+                <li className="list-disc">Açúcar</li>
+                <li className="list-disc">Farinha de trigo</li>
+                <li className="list-disc">Leite em pó</li>
+                <li className="list-disc">Molho de tomate</li>
+                <li className="list-disc">Sardinha</li>
+              </ul>
             </Rule>
           </div>
 
           <div className="mt-8 flex flex-wrap gap-4">
             <a
               href="[LINK_REGULAMENTO]"
-              className="rounded-full bg-[#01255f] px-6 py-3 font-bold text-white transition hover:bg-yellow-200"
+              className="rounded-full bg-[#01255f] px-6 py-3 font-bold text-white transition hover:bg-[#072048]"
             >
               Ler regulamento
             </a>
