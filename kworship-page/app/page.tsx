@@ -210,20 +210,6 @@ export default function Home() {
             </Rule>
           </div>
 
-          <div className="mt-8 flex flex-wrap gap-4">
-            <a
-              href="[LINK_REGULAMENTO]"
-              className="rounded-full bg-[#01255f] px-6 py-3 font-bold text-white transition hover:bg-[#072048]"
-            >
-              Ler regulamento
-            </a>
-            <a
-              href="[LINK_TERMOS]"
-              className="rounded-full border border-white/30 px-6 py-3 font-semibold transition hover:bg-white/10"
-            >
-              Termos e condições
-            </a>
-          </div>
         </div>
       </section>
 
@@ -235,17 +221,6 @@ export default function Home() {
         <p className="mt-2">
           © 2026 Todos os direitos reservados.
         </p>
-        <div className="mt-4 flex flex-wrap justify-center gap-5">
-          <a href="[LINK_REGULAMENTO]" className="hover:text-orange-600">
-            Regulamento
-          </a>
-          <a href="[LINK_TERMOS]" className="hover:text-orange-600">
-            Termos e condições
-          </a>
-          <a href="[LINK_PRIVACIDADE]" className="hover:text-orange-600">
-            Política de privacidade
-          </a>
-        </div>
       </footer>
     </main>
   );
