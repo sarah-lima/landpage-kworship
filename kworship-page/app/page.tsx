@@ -19,15 +19,11 @@ export default function Home() {
 
         {/* Gradiente somente no desktop */}
         <div
-          className="absolute inset-0 -z-10 hidden bg-gradient-to-br from-[#01255f] to-[#072048] md:block"
+          className="absolute inset-0 -z-10 hidden bg-gradient-to-br from-[#84a1cf] to-[#84a1cf] md:block"
           aria-hidden="true"
         />
 
         <div className="mx-auto max-w-6xl">
-          <span className="inline-block mx-6 rounded-full bg-white/20 px-4 py-2 text-sm font-semibold backdrop-blur">
-            EVENTO ESPECIAL
-          </span>
-
           <div className="mt-2 grid px-4 items-center gap-10 md:grid-cols-2">
             <div>
  
@@ -204,6 +200,9 @@ export default function Home() {
                 <li className="list-disc">Sardinha</li>
               </ul>
             </Rule>
+            <Rule title="Quais instituições serão beneficiadas com as doações?">
+              As doações serão destinadas a comunidade terapêutica Germano Neemias, CNPJ 30.758.434.0001/16
+</Rule>
           </div>
 
         </div>
