@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
+import Header from "./components/header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,7 +25,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-           <head>
+      <head>
 
         {/* Google Tag Manager */}
 
@@ -45,16 +46,18 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
 
       </head>
       <body className="min-h-full flex flex-col">
-          <noscript>
-    <iframe
-      src="https://www.googletagmanager.com/ns.html?id=GTM-NCLVFQ86"
-      height="0"
-      width="0"
-      style={{ display: "none", visibility: "hidden" }}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-NCLVFQ86"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
 
-    />
+          />
 
-  </noscript>
+        </noscript>
+        <Header />
+
         {children}</body>
     </html>
   );
