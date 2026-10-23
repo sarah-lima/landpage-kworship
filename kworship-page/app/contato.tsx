@@ -2,6 +2,7 @@
 
 const telefone = "5511969249257";
 const instagram = "https://www.instagram.com/kworshipday/";
+const instagramAdalos = "https://www.instagram.com/adalos_jpn/";
 
 export default function Contato() {
   return (
@@ -69,7 +70,7 @@ export default function Contato() {
             </div>
 
             <h3 className="text-xl font-bold text-[#082b65]">
-              Siga o Ádalos
+              Siga o Ádalos e KWorshipday
             </h3>
 
             <p className="mt-2 text-gray-600">
@@ -77,17 +78,26 @@ export default function Contato() {
             </p>
 
             <p className="mt-5 text-lg font-semibold text-[#b42375]">
-              @kworshipday
+              @kworshipday<br/>
+              @adalos_jpn
             </p>
 
-            <div className="mt-auto pt-6">
+            <div className="mt-auto flex flex-col gap-3 pt-6 sm:flex-row">
+              <a
+                target="_blank"
+                href={instagramAdalos}
+                className="flex min-h-12 flex-1 items-center justify-center gap-2 rounded-xl bg-[#082b65] px-4 py-3 text-sm font-semibold text-white hover:bg-[#123d83]"
+              >
+                <span>Instagram Ádalos ↗</span>
+              </a>
+
               <a
                 href={instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-[#082b65] px-5 py-3 text-sm font-semibold text-white hover:bg-[#123d83]"
+                className="flex min-h-12 flex-1 items-center justify-center gap-2 rounded-xl border border-[#082b65] px-4 py-3 text-sm font-semibold text-[#082b65] hover:bg-[#eef3fc]"
               >
-                Acessar Instagram ↗
+                <span>Instagram Kworship ↗</span>
               </a>
             </div>
           </article>

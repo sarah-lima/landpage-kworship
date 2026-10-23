@@ -197,7 +197,7 @@ export default function Home() {
                     <p className="mt-1 text-gray-600">
                       Praça Coronel Fernando Prestes        </p>
                     <p className="text-sm text-gray-500">
-                      Bom Retiro (Metrô Tiradentes) - São Paulo/SP
+                      Bom Retiro (Metrô Tiradentes - linha azul) - São Paulo/SP
                     </p>
                   </div>
                 </div>
