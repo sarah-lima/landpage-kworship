@@ -54,7 +54,7 @@ export default function Sorteio() {
               Doe um quilo de alimento.
               <br /> Cada kg doado = 1 voucher<br /> O alimento deve ser apresentado nos dias do evento            </StepCard>
             <StepCard number="03" title="Esteja presente no evento">
-              Participe do evento ao longo dos dias e esteja presente no momento do sorteio.            </StepCard>
+             Participe do evento ao longo dos dias e <b> esteja presente no momento do sorteio</b>. O prêmio será entregue exclusivamente à pessoa sorteada, não sendo permitida a retirada por familiares, representantes ou pessoas conhecidas.            </StepCard>
           </div>
         </div>
 
