@@ -75,7 +75,10 @@ export default function Sorteio() {
               <br /> E estar presente no evento nos dias 07/11 e 08/11.
             </Rule>
             <Rule title="Quando será realizado o sorteio?">
-              O sorteio será realizado nos dias 07/11 e 08/11, durante o evento.
+              O sorteio será realizado um no dia 07/11 e outra dia 08/11, durante o evento.
+            </Rule>
+            <Rule title="Doando alimento no sábado estarei concorrendo ao sorteio de domingo?">
+              Não, ao doar alimento no sábado, você apenas estará concorrendo ao sorteio do dia 07/11, para concorrer nos dois dias é necessário doar alimento em ambos os dias.
             </Rule>
             <Rule title="Quais alimentos podem ser doados?">
               <ul>
