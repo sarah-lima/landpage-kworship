@@ -13,7 +13,7 @@ type CarrosselProps = {
   cards: Card[];
   title: string;
   color?: string;
-  tipo?: "participacoes" | "comidas";
+  tipo?: "participacoes" | "comidas" | "expositores";
 };
 
 export default function Carrossel({
@@ -25,13 +25,28 @@ export default function Carrossel({
   const [indice, setIndice] = useState(0);
   const [visiveis, setVisiveis] = useState(1);
   const toqueInicial = useRef<number | null>(null);
-const participacoes = tipo === "participacoes";
+
+  const participacoes = tipo === "participacoes";
+  const expositores = tipo === "expositores";
+
   const quantidadeVisivel =
-  visiveis >= 4 ? (participacoes ? 4 : 3) : visiveis;
-const maxIndice = Math.max(0, cards.length - quantidadeVisivel);
+    visiveis >= 4
+      ? participacoes || expositores
+        ? 4
+        : 3
+      : visiveis;
+
+  const maxIndice = Math.max(0, cards.length - quantidadeVisivel);
+
   useEffect(() => {
     const atualizarVisiveis = () => {
-      setVisiveis(window.innerWidth >= 1024 ? 4 : window.innerWidth >= 640 ? 2 : 1);
+      setVisiveis(
+        window.innerWidth >= 1024
+          ? 4
+          : window.innerWidth >= 640
+            ? 2
+            : 1,
+      );
     };
 
     atualizarVisiveis();
@@ -52,17 +67,24 @@ const maxIndice = Math.max(0, cards.length - quantidadeVisivel);
     setIndice((atual) => Math.max(atual - 1, 0));
   };
 
-  const fundo = (participacoes ? "#102B59" : "#F8F5EF");
-  const texto = participacoes ? "text-white" : "text-[#102B59]";
-  const destaque = participacoes ? "#DDAA72" : "#3B6FB6";
-  const cardFundo = "bg-white";
-  const totalPaginas = maxIndice + 1;
-const gapPx = 8;
+  const fundo = participacoes
+    ? "#102B59"
+    : expositores
+      ? "#EEF4FC"
+      : "#F8F5EF";
 
-const larguraCard = `calc((100% - ${
-  gapPx * (quantidadeVisivel - 1)
-}px) / ${quantidadeVisivel})`;
-if (!cards.length) return null;
+  const texto = participacoes ? "text-white" : "text-[#102B59]";
+
+  const destaque = participacoes ? "#DDAA72" : "#3B6FB6";
+
+  const totalPaginas = maxIndice + 1;
+  const gapPx = 8;
+
+  const larguraCard = `calc((100% - ${
+    gapPx * (quantidadeVisivel - 1)
+  }px) / ${quantidadeVisivel})`;
+
+  if (!cards.length) return null;
 
   return (
     <section
@@ -71,16 +93,23 @@ if (!cards.length) return null;
       aria-label={title}
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
         {/* Título e navegação */}
         <div className="mb-6 flex items-center justify-between gap-4 sm:mb-8">
           <div>
             <p
               className={`mb-2 text-xs font-bold uppercase tracking-[0.2em] ${texto} opacity-75`}
             >
-              {participacoes ? "Conheça os convidados" : "Sabores da Coreia"}
+              {participacoes
+                ? "Conheça os convidados"
+                : expositores
+                  ? "Marcas que estarão com a gente"
+                  : "Sabores da Coreia"}
             </p>
 
-            <h2 className={`text-2xl font-black sm:text-3xl md:text-4xl ${texto}`}>
+            <h2
+              className={`text-2xl font-black sm:text-3xl md:text-4xl ${texto}`}
+            >
               {title}
             </h2>
 
@@ -111,7 +140,9 @@ if (!cards.length) return null;
               disabled={indice >= maxIndice}
               aria-label="Próximos cards"
               className="flex h-10 w-10 items-center justify-center rounded-full text-white transition hover:opacity-80 disabled:cursor-not-allowed disabled:opacity-30"
-              style={{ backgroundColor: participacoes ? "#3B6FB6" : "#102B59" }}
+              style={{
+                backgroundColor: participacoes ? "#3B6FB6" : "#102B59",
+              }}
             >
               <span aria-hidden="true">→</span>
             </button>
@@ -127,7 +158,8 @@ if (!cards.length) return null;
           onTouchEnd={(e) => {
             if (toqueInicial.current === null) return;
 
-            const diferenca = toqueInicial.current - e.changedTouches[0].clientX;
+            const diferenca =
+              toqueInicial.current - e.changedTouches[0].clientX;
 
             if (diferenca > 50) proximo();
             if (diferenca < -50) anterior();
@@ -137,28 +169,36 @@ if (!cards.length) return null;
         >
           <div
             className="flex items-stretch gap-2 transition-transform duration-500 ease-out"
-         style={{
-  transform: `translateX(calc(${indice} * (-1 * (${larguraCard}) - ${gapPx}px)))`,
-}}   
+            style={{
+              transform: `translateX(calc(${indice} * (-1 * (${larguraCard}) - ${gapPx}px)))`,
+            }}
           >
             {cards.map((card, i) => (
               <article
                 key={`${card.titulo}-${i}`}
-                className={`flex min-w-0 shrink-0 flex-col overflow-hidden rounded-2xl ${cardFundo} shadow-sm transition-shadow duration-300 hover:shadow-xl ${
-                  visiveis === 1
-                    ? "w-full"
-                    : visiveis === 2
-                      ? "w-[calc((100%-1rem)/2)]"
-                      : `w-[calc((100%-2rem)/${tipo === "participacoes" ? 4 : 3})]`
+                className={`flex min-w-0 shrink-0 flex-col overflow-hidden rounded-2xl shadow-sm transition-shadow duration-300 hover:shadow-xl ${
+                  expositores
+                    ? "border border-[#D9E4F2] bg-white p-3 sm:p-4"
+                    : "bg-white"
                 }`}
                 style={{ width: larguraCard }}
               >
-                <div className="relative aspect-[4/3] overflow-hidden sm:aspect-[5/4]">
+                <div
+                  className={`relative overflow-hidden ${
+                    expositores
+                      ? "aspect-[4/3] rounded-xl"
+                      : "aspect-[4/3] sm:aspect-[5/4]"
+                  }`}
+                >
                   <img
                     src={card.imagem}
                     alt={card.titulo}
                     loading={i < visiveis ? "eager" : "lazy"}
-                    className="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-500 hover:scale-105"
+                    className={`absolute inset-0 h-full w-full transition-transform duration-500 ${
+                      expositores
+                        ? "object-contain p-2"
+                        : "object-cover object-center hover:scale-105"
+                    }`}
                   />
 
                   {participacoes && (
@@ -170,24 +210,24 @@ if (!cards.length) return null;
                   )}
                 </div>
 
-                <div className="flex flex-1 flex-col p-4 sm:p-5">
-                  {!participacoes && (
+                {!participacoes && !expositores && (
+                  <div className="flex flex-1 flex-col p-4 sm:p-5">
                     <h3 className="text-base font-extrabold text-[#102B59] sm:text-lg">
                       {card.titulo}
                     </h3>
-                  )}
 
-                  {card.descricao && (
-                    <p className="mt-2 line-clamp-4 flex-1 text-sm leading-relaxed text-gray-600">
-                      {card.descricao}
-                    </p>
-                  )}
+                    {card.descricao && (
+                      <p className="mt-2 line-clamp-4 flex-1 text-sm leading-relaxed text-gray-600">
+                        {card.descricao}
+                      </p>
+                    )}
 
-                  <div
-                    className="mt-4 h-1 w-10 rounded-full"
-                    style={{ backgroundColor: destaque }}
-                  />
-                </div>
+                    <div
+                      className="mt-4 h-1 w-10 rounded-full"
+                      style={{ backgroundColor: destaque }}
+                    />
+                  </div>
+                )}
               </article>
             ))}
           </div>
