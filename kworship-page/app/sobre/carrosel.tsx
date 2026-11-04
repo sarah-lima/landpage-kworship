@@ -194,11 +194,7 @@ export default function Carrossel({
                     src={card.imagem}
                     alt={card.titulo}
                     loading={i < visiveis ? "eager" : "lazy"}
-                    className={`absolute inset-0 h-full w-full transition-transform duration-500 ${
-                      expositores
-                        ? "object-contain p-2"
-                        : "object-cover object-center hover:scale-105"
-                    }`}
+                    className={`absolute inset-0 h-full w-full transition-transform duration-500 object-cover object-center hover:scale-105`}
                   />
 
                   {participacoes && (
