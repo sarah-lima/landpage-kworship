@@ -67,7 +67,6 @@ export default function Home() {
         { imagem: "hotdog.png", titulo: "Hot Dog Coreano", descricao: "Hotdog coreano empanado e crocante, recheado com salsicha e queijo derretido." },
           { imagem: "/japagueti.jpeg", titulo: "Japchae", descricao: "Macarrão de batata doce com legumes variados e carne em um molho agridoce." },
           { imagem: "/mandu.jpeg", titulo: "Mandu", descricao: "Bolinho frito recheado de carne e vegetais." },
-          { imagem: "/doce.jpeg", titulo: "Tanghulu", descricao: "Espetinho de frutas cobertas por uma camada fina e crocante de açúcar." },
         ]} />
       </section>
       {/* Rodapé */}
