@@ -30,7 +30,7 @@ export default function Sorteio() {
                 Prêmios especiais
               </h3>
               <p className="mt-3 text-gray-700">
-                Sortearemos 2 passagens de ida e volta para a Coreia do Sul, uma no sábado e outra no domingo.<br />Lembrando que o prêmio custeia apenas a passagem!
+                Sortearemos <b>3</b> passagens de ida e volta para a Coreia do Sul, uma no sábado e outra no domingo.<br />Lembrando que o prêmio custeia apenas a passagem!
               </p>
             </div>
           </div>
@@ -75,7 +75,7 @@ export default function Sorteio() {
               <br /> E estar presente no evento nos dias 07/11 e 08/11.
             </Rule>
             <Rule title="Quando será realizado o sorteio?">
-              O sorteio será realizado um no dia 07/11 e outra dia 08/11, durante o evento.
+              O sorteio será realizado um no dia 07/11 e outra dia 08/11, durante o evento. Das 10h - 21h.
             </Rule>
             <Rule title="Doando alimento no sábado estarei concorrendo ao sorteio de domingo?">
               Não, ao doar alimento no sábado, você apenas estará concorrendo ao sorteio do dia 07/11, para concorrer nos dois dias é necessário doar alimento em ambos os dias.
