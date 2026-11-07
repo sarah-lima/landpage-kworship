@@ -62,8 +62,8 @@ Consulte as regras, condições de participação e critérios para recebimento 
   href="https://docs.google.com/document/d/1PM_RlwlERUWLKh4IF5J7wyd750ZIo78U/edit?usp=drivesdk&ouid=100304160764718001992&rtpof=true&sd=true"
   target="_blank"
   rel="noopener noreferrer"
->
-  Consultar regulamento completo
+><b>
+  Consultar regulamento completo</b>
 </a>
         </div>
 
