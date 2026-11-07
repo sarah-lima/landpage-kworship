@@ -56,6 +56,15 @@ export default function Sorteio() {
             <StepCard number="03" title="Esteja presente no evento">
              Participe do evento ao longo dos dias e <b> esteja presente no momento do sorteio</b>. O prêmio será entregue exclusivamente à pessoa sorteada, não sendo permitida a retirada por familiares, representantes ou pessoas conhecidas.            </StepCard>
           </div>
+Leia o regulamento completo do sorteio<br/>
+Consulte as regras, condições de participação e critérios para recebimento do prêmio.<br/>
+          <a
+  href="https://docs.google.com/document/d/1PM_RlwlERUWLKh4IF5J7wyd750ZIo78U/edit?usp=drivesdk&ouid=100304160764718001992&rtpof=true&sd=true"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  Consultar regulamento completo
+</a>
         </div>
 
       {/* Regras */}
