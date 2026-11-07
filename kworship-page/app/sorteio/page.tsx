@@ -56,16 +56,35 @@ export default function Sorteio() {
             <StepCard number="03" title="Esteja presente no evento">
              Participe do evento ao longo dos dias e <b> esteja presente no momento do sorteio</b>. O prêmio será entregue exclusivamente à pessoa sorteada, não sendo permitida a retirada por familiares, representantes ou pessoas conhecidas.            </StepCard>
           </div>
-Leia o regulamento completo do sorteio<br/>
-Consulte as regras, condições de participação e critérios para recebimento do prêmio.<br/>
-          <a
-  href="https://docs.google.com/document/d/1PM_RlwlERUWLKh4IF5J7wyd750ZIo78U/edit?usp=drivesdk&ouid=100304160764718001992&rtpof=true&sd=true"
-  target="_blank"
-  rel="noopener noreferrer"
-><b>
-  Consultar regulamento completo</b>
-</a>
-        </div>
+
+<div className="mt-8 rounded-2xl border border-[#aac5ef]/30 bg-[#01255f] px-6 py-8 text-center shadow-lg">
+  <div className="mb-3 text-3xl">📋</div>
+
+  <h3 className="mb-3 text-xl font-bold text-white">
+    Regulamento do Sorteio
+  </h3>
+
+  <p className="mx-auto mb-6 max-w-xl text-sm leading-relaxed text-blue-100">
+    Confira todas as regras, condições de participação e
+    critérios para recebimento do prêmio antes de participar.
+  </p>
+
+  <a
+    href="https://docs.google.com/document/d/1PM_RlwlERUWLKh4IF5J7wyd750ZIo78U/preview"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3 font-bold text-[#01255f] transition-all duration-300 hover:-translate-y-1 hover:bg-[#aac5ef] hover:shadow-lg"
+  >
+    <span>📄</span>
+    Ler regulamento completo
+    <span>↗</span>
+  </a>
+
+  <p className="mt-4 text-xs text-blue-200">
+    A participação está sujeita às condições do regulamento.
+  </p>
+</div>
+ </div>
 
       {/* Regras */}
       <div className="bg-gradient-to-br from-[#01255f] to-[#072048] px-6 py-20 text-white">
